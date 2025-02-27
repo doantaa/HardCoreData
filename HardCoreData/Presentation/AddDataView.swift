@@ -6,11 +6,14 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct AddDataView: View {
     @State var title: String = ""
     @State var description: String = ""
     @EnvironmentObject var router: NavigationRouter
+    @Environment(\.managedObjectContext) var managedObjectContext
+
     var body: some View {
         Form {
             Text("Input Data")
@@ -26,6 +29,10 @@ struct AddDataView: View {
 //            .disabled(title.isEmpty || description.isEmpty)
 
         }
+    }
+
+    private func saveData(){
+
     }
 }
 

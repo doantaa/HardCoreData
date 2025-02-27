@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct HardCoreDataApp: App {
-    let persistenceController = PersistenceController.shared
+    @StateObject var persistenceController = PersistenceController()
     @ObservedObject var router = NavigationRouter()
     let navigationHandler = NavigationHandler()
     var body: some Scene {

@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ListItem: View {
+    var title: String
+    var desription: String
+    var date: String
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
@@ -22,7 +25,7 @@ struct ListItem: View {
             }
         }
         .padding()
-        .background(.gray.opacity(0.3))
+        .background(.gray.opacity(0.1))
         .cornerRadius(10)
         .padding(.horizontal)
 
@@ -30,5 +33,5 @@ struct ListItem: View {
 }
 
 #Preview {
-    ListItem()
+    ListItem(title: "Lorem", desription: "Lorem", date: "Lorem")
 }

@@ -1,2 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="23605" systemVersion="24D60" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier=""/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="23605" systemVersion="24D60" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
+    <entity name="Car" representedClassName="Car" syncable="YES" codeGenerationType="class">
+        <attribute name="color" optional="YES" attributeType="String"/>
+        <attribute name="isDiesel" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="make" optional="YES" attributeType="String"/>
+        <attribute name="model" optional="YES" attributeType="String"/>
+        <attribute name="thumbnail" optional="YES" attributeType="Transformable"/>
+        <attribute name="year" optional="YES" attributeType="String"/>
+        <relationship name="options" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Options" inverseName="car" inverseEntity="Options"/>
+    </entity>
+    <entity name="Options" representedClassName="Options" syncable="YES" codeGenerationType="class">
+        <attribute name="alarm" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="bluetooth" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="offRoadPackage" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="powerSteering" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="powerWindows" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <relationship name="car" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Car" inverseName="options" inverseEntity="Car"/>
+    </entity>
+</model>
